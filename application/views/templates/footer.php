@@ -5,22 +5,18 @@
                     <div class="col-lg-3 col-md-6 footer-contact">
                         <h3 class="heading-sub">CarsRent</h3>
                         <p>
-                            Jl.Pagelaran <br>
-                            Bogor, Ciomas 16610<br>
-                            Indonesia <br><br>
                             <strong>Phone:</strong> +62 5984 6716 635<br>
-                            <strong>Email:</strong> helpdesk@godrive.com<br>
+                            <strong>Email:</strong> helpdesk@CarsRent.com<br>
                         </p>
                     </div>
                     <div class="col-lg-3 col-md-6 footer-links">
                         <h4 class="heading-sub">Useful Links</h4>
                         <ul>
-                            <li><i class="bx bx-chevron-right"></i> <a href="index.php">Home</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="about.php">About</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="services.php">Services</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="cars.php">Cars</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="review.php">Review</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="contact.php">Contact</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="<?= base_url('home') ?>">Home</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="<?= base_url('about') ?>">About</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="<?= base_url('cars') ?>">Cars</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="<?= base_url('review') ?>">Review</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="<?= base_url('contact')?>">Contact</a></li>
                         </ul>
                     </div>
                     <div class="col-lg-3"></div>
@@ -36,7 +32,16 @@
                 </div>
             </div>
         </div>
-        <div class="footer-bottom d-flex justify-content-center py-3">
+            <section id="breadcrumb">
+        <div class="container">
+            <div class="row">
+                <nav aria-label="breadcrumb">
+
+                </nav>
+            </div>
+        </div>
+    </section>
+        <div class="footer-bottom d-flex justify-content-center py-3" style="background-color: #527853;">
             &copy; Copyright <strong><span> CarsRent</span></strong>. All Rights Reserved
         </div>
     </footer>

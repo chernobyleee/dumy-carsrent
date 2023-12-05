@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>GoDrive</title>
+    <title>CarsRent</title>
     <!-- BOOTSTRAP -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
@@ -18,7 +18,7 @@
     <!-- REMIX ICON -->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
     <!-- CUSTOM CSS -->
-    <link rel="stylesheet" href="css/auth.css">
+    <link rel="stylesheet" href="<?= base_url('assets/css/auth.css') ?>">
     <!-- Google Fonts -->
     <link
         href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
@@ -30,54 +30,34 @@
 
 </head>
 
-<body class="register">
-    <section id="form-box" class="mx-4 my-5">
+<body class="login">
+    <section id="form-box" class="mx-4">
         <div class="container-fluid">
             <div class="section-title mb-3">
-                <h2 class="fw-bold text-center">REGISTER FORM</h2>
+                <h2 class="fw-bold text-center">LOGIN FORM</h2>
             </div>
             <div class="row align-items-center">
-                <div class="col-12">
+                <div class="d-none d-md-block col-md-6">
+                    <img src="<?= base_url('assets/img/carsrent.png') ?>" class="img-fluid img-login" alt="">
+                </div>
+                <div class="col-12 col-md-6">
                     <form>
                         <div class="mb-3">
-                            <label class="form-label">Nama Lengkap</label>
-                            <input type="text" class="form-control" placeholder="Masukan Nama Lengkap" required>
+                            <label class="form-label">Username</label>
+                            <input type="text" class="form-control">
                         </div>
                         <div class="mb-3">
-                            <label class="form-label">Email</label>
-                            <input type="email" class="form-control" placeholder="Masukan Email" required>
+                            <label fclass="form-label">Password</label>
+                            <input type="password" class="form-control">
                         </div>
                         <div class="mb-3">
-                            <label class="form-label">Nomor Handphone</label>
-                            <input type="text" class="form-control" placeholder="Masukan Nomor Handphone" required>
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-label">Alamat</label>
-                            <textarea class="form-control" placeholder="Masukan Alamat" required></textarea>
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-label">Jenis Identitas</label>
-                            <select class="form-control" id="identitas" required>
-                                <option disabled selected>Pilih Jenis Identitas</option>
-                                <option>KTP</option>
-                                <option>SIM</option>
-                            </select>
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-label">Nomor Identitas</label>
-                            <input type="text" class="form-control" placeholder="Masukan Nomor Identitas" disabled
-                                id="no-identitas" required>
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-label">Lampiran Identitas</label>
-                            <input class="form-control" type="file" disabled id="lampiran-identitas" required>
-                        </div>
-                        <div class="mb-3">
-                            <button class="btn-login">Register</button>
+                            <button class="btn-login">Login</button>
                             <a class="btn-cancel mt-1" href="index.php">Back To Home</a>
                         </div>
                         <div class="mb-3 text-center">
-                            <a href="login.php" class="link"><small>Already have account? Login</small></a>
+                            <a href="#" class="link"><small>Forgot Password</small></a>
+                            <br>
+                            <a href="<?= base_url('autentifikasi/register') ?>" class="link"><small>Don't have an account? Register</small></a>
                         </div>
                     </form>
                 </div>

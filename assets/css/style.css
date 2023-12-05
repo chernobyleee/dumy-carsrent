@@ -4,10 +4,10 @@
 }
 
 :root {
-    --blue-color: #45b2ce;
-    --dark-blue-color: #283a5a;
+    --blue-color: #6297a0;
+    --dark-blue-color: #285a45;
     --gray-color: #5e5e5e;
-    --dark-light-blue-color: #37517e;
+    --dark-light-blue-color: #0b301b;
 }
 
 #navbar {
@@ -110,7 +110,7 @@
 
 #hero {
     padding: 150px 0px;
-    background-color: var(--dark-light-blue-color);
+    background-color: var(--gray-color);
     color: white;
 }
 
@@ -155,7 +155,7 @@
 }
 
 #cta {
-    background: linear-gradient(rgba(40, 58, 90, 0.9), rgba(40, 58, 90, 0.9)), url("../img/cta-bg.jpg") fixed center center;
+    background: linear-gradient(rgba(12, 68, 63, 0.9), rgba(9, 82, 70, 0.9)), url("../img/cta-bg.jpg") fixed center center;
     background-size: cover;
     padding: 120px 0;
     color: white;
@@ -189,7 +189,7 @@ section {
     font-weight: bold;
     text-transform: uppercase;
     position: relative;
-    color: #37517e;
+    color: #285a45;
 }
 
 .section-title p {
@@ -229,7 +229,12 @@ section {
 
 #breadcrumb {
     padding-top: 90px;
-    background-color: #f3f5faff;
+    background-color: rgba(243, 245, 250, 0.308);
+}
+
+#breadcrumbfooter {
+    padding-top: 50px;
+    background-color: rgba(243, 245, 250, 0.075);
 }
 
 #about {
@@ -256,6 +261,7 @@ section {
 
 #about .section-title h2 {
     margin-bottom: 0;
+    color: #285a45;
 }
 
 #services {
@@ -275,7 +281,7 @@ section {
     transform: translate(0px, -15px);
 }
 
-.service-item:hover h4 {
+lor .service-item:hover h4 {
     color: var(--blue-color);
 }
 
@@ -416,4 +422,72 @@ section {
     .cars-img {
         height: unset;
     }
+}
+
+.stars {
+    display: flex;
+}
+
+.star {
+    display: none;
+}
+
+.star+label {
+    cursor: pointer;
+    width: 35px;
+    height: 35px;
+    background-image: url("../img/star-disable.png");
+    background-size: cover;
+}
+
+.star:checked+label,
+.star:hover+label {
+    background-image: url("../img/star-enable.png");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.rate {
+    float: left;
+    height: 46px;
+    padding: 0 10px;
+}
+
+.rate:not(:checked)>input {
+    position: absolute;
+    top: -9999px;
+}
+
+.rate:not(:checked)>label {
+    float: right;
+    width: 1em;
+    overflow: hidden;
+    white-space: nowrap;
+    cursor: pointer;
+    font-size: 30px;
+    color: #ccc;
+}
+
+.rate:not(:checked)>label:before {
+    content: '★ ';
+}
+
+.rate>input:checked~label {
+    color: #ffc700;
+}
+
+.rate:not(:checked)>label:hover,
+.rate:not(:checked)>label:hover~label {
+    color: #deb217;
+}
+
+.rate>input:checked+label:hover,
+.rate>input:checked+label:hover~label,
+.rate>input:checked~label:hover,
+.rate>input:checked~label:hover~label,
+.rate>label:hover~input:checked~label {
+    color: #c59b08;
 }

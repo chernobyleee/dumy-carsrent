@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>GoDrive</title>
+    <title>CarsRent</title>
     <!-- BOOTSTRAP -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
@@ -18,7 +18,7 @@
     <!-- REMIX ICON -->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
     <!-- CUSTOM CSS -->
-    <link rel="stylesheet" href="css/auth.css">
+    <link rel="stylesheet" href="<?= base_url('assets/css/auth.css') ?>">
     <!-- Google Fonts -->
     <link
         href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
@@ -30,34 +30,46 @@
 
 </head>
 
-<body class="login">
-    <section id="form-box" class="mx-4">
+<body class="register">
+    <section id="form-box" class="mx-4 my-5">
         <div class="container-fluid">
             <div class="section-title mb-3">
-                <h2 class="fw-bold text-center">LOGIN FORM</h2>
+                <h2 class="fw-bold text-center">REGISTER FORM</h2>
             </div>
             <div class="row align-items-center">
-                <div class="d-none d-md-block col-md-6">
-                    <img src="img/login.png" class="img-fluid img-login" alt="">
-                </div>
-                <div class="col-12 col-md-6">
+                <div class="col-12">
                     <form>
                         <div class="mb-3">
+                            <label class="form-label">Nama Lengkap</label>
+                            <input type="text" class="form-control" placeholder="Masukan Nama Lengkap" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Username</label>
+                            <input type="text" class="form-control" placeholder="Masukan Username" required>
+                        </div>
+                        <div class="mb-3">
                             <label class="form-label">Email</label>
-                            <input type="email" class="form-control">
+                            <input type="email" class="form-control" placeholder="Masukan Email" required>
                         </div>
                         <div class="mb-3">
-                            <label fclass="form-label">Password</label>
-                            <input type="password" class="form-control">
+                            <label class="form-label">Password</label>
+                            <input type="email" class="form-control" placeholder="Masukan password" required>
                         </div>
                         <div class="mb-3">
-                            <button class="btn-login">Login</button>
-                            <a class="btn-cancel mt-1" href="index.php">Back To Home</a>
+                            <label class="form-label">Masukkan password lagi</label>
+                            <input type="email" class="form-control" placeholder="Masukan password" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Nomor Handphone</label>
+                            <input type="text" class="form-control" placeholder="Masukan Nomor Handphone" required>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <button class="btn-login">Register</button>
+                            <a class="btn-cancel mt-1" href="<?= base_url('home')?>">Back To Home</a>
                         </div>
                         <div class="mb-3 text-center">
-                            <a href="#" class="link"><small>Forgot Password</small></a>
-                            <br>
-                            <a href="register.php" class="link"><small>Don't have an account? Register</small></a>
+                            <a href="<?= base_url('autentifikasi/login')?>" class="link"><small>Already have account? Login</small></a>
                         </div>
                     </form>
                 </div>
