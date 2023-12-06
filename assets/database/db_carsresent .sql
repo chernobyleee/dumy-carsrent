@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 05, 2023 at 11:40 AM
+-- Generation Time: Dec 06, 2023 at 02:32 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.0.28
 
@@ -20,6 +20,27 @@ SET time_zone = "+00:00";
 --
 -- Database: `db_carsresent`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `contact`
+--
+
+CREATE TABLE `contact` (
+  `id_contact` int(16) NOT NULL,
+  `nama` varchar(64) NOT NULL,
+  `email` varchar(64) NOT NULL,
+  `subject` varchar(128) NOT NULL,
+  `message` varchar(256) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `contact`
+--
+
+INSERT INTO `contact` (`id_contact`, `nama`, `email`, `subject`, `message`) VALUES
+(1, 'Orang Gila', '12221061@bsi.ac.id', 'Kurang Mobil Kurang Mobil Kurang Mobil Kurang Mobil Kurang Mobil ', 'Mobilnya kurang lengkap gan Mobilnya kurang lengkap gan Mobilnya kurang lengkap gan Mobilnya kurang lengkap gan Mobilnya kurang lengkap gan Mobilnya kurang lengkap gan Mobilnya kurang lengkap gan Mobilnya kurang lengkap gan Mobilnya kurang lengkap gan Mobi');
 
 -- --------------------------------------------------------
 
@@ -75,15 +96,10 @@ CREATE TABLE `review` (
 INSERT INTO `review` (`id_review`, `id_user`, `id`, `is_active`, `rating`, `massage`) VALUES
 (1, 1, 1, 0, 5, 'Gile mobilnye, ajib bener ye.'),
 (2, 2, 8, 0, 2, 'asoy geboy ngebut dijalanan ibukota asoy geboy ngebut dijalanan'),
-(106, 2, 4, 0, 3, 'jadsh dskjhl '),
-(140, 2, 2, 0, 4, '4 star deh, coba lagi 1 kali'),
-(334, 2, 2, 0, 5, '12345678'),
-(336, 1, 7, 0, 5, '2^6'),
-(367, 1, 2, 0, 5, '345'),
-(368, 2, 7, 0, 4, 'qwertyghb '),
-(369, 2, 7, 0, 2, 'jelek'),
-(370, 1, 2, 0, 5, '5'),
-(372, 2, 3, 0, 3, 'asd');
+(375, 1, 2, 0, 4, 'aaa'),
+(376, 1, 2, 0, 3, 'ci3'),
+(377, 2, 2, 0, 4, 'jelek'),
+(378, 1, 3, 0, 5, 'bagus banget bagus banget bagus banget bagus banget bagus banget');
 
 -- --------------------------------------------------------
 
@@ -115,8 +131,11 @@ INSERT INTO `tipe` (`id_tipe`, `nama`) VALUES
 
 CREATE TABLE `user` (
   `id_user` int(5) NOT NULL,
+  `role` int(1) NOT NULL,
   `username` varchar(256) NOT NULL,
   `password` varchar(64) NOT NULL,
+  `nama` varchar(64) NOT NULL,
+  `email` varchar(128) NOT NULL,
   `nohp` int(20) NOT NULL,
   `gambar` varchar(64) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -125,13 +144,19 @@ CREATE TABLE `user` (
 -- Dumping data for table `user`
 --
 
-INSERT INTO `user` (`id_user`, `username`, `password`, `nohp`, `gambar`) VALUES
-(1, 'ujang sangkuriang', 'rahasianegara', 217918768, 'as'),
-(2, 'budi', 'rahasianegro', 12345, 'asd');
+INSERT INTO `user` (`id_user`, `role`, `username`, `password`, `nama`, `email`, `nohp`, `gambar`) VALUES
+(1, 0, 'ujang sangkuriang', 'rahasianegara', '', '', 217918768, 'as'),
+(2, 0, 'budi', 'rahasianegro', '', '', 12345, 'asd');
 
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `contact`
+--
+ALTER TABLE `contact`
+  ADD PRIMARY KEY (`id_contact`);
 
 --
 -- Indexes for table `mobil`
@@ -165,6 +190,12 @@ ALTER TABLE `user`
 --
 
 --
+-- AUTO_INCREMENT for table `contact`
+--
+ALTER TABLE `contact`
+  MODIFY `id_contact` int(16) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT for table `mobil`
 --
 ALTER TABLE `mobil`
@@ -174,7 +205,7 @@ ALTER TABLE `mobil`
 -- AUTO_INCREMENT for table `review`
 --
 ALTER TABLE `review`
-  MODIFY `id_review` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=375;
+  MODIFY `id_review` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=379;
 
 --
 -- AUTO_INCREMENT for table `tipe`
