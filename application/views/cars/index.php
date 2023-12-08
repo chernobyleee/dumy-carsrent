@@ -61,7 +61,7 @@ if ($conn->connect_error) {
 
             foreach ($mobil as $r) { ?>
 
-                <div class="col-xl-3 col-lg-4 col-md-6 col-12 cars-item filter-<?= $r['tipe']; ?> d-flex align-items-stretch mt-4">
+                <div class="col-xl-3 col-lg-4 col-md-6 col-12 cars-item filter-<?= $r['tipe']; ?> align-items-stretch mt-4">
                     <div class="cars-wrap">
                         <div class="cars-img">
                             <img src="<?= base_url('assets/img/cars/') . $r['gambar']; ?>" alt="" class="img-fluid">
