@@ -52,7 +52,7 @@
                         </div>
                         <div class="mb-3">
                             <button class="btn-login">Login</button>
-                            <a class="btn-cancel mt-1" href="index.php">Back To Home</a>
+                            <a class="btn-cancel mt-1" href="<?= base_url('home')?> ">Back To Home</a>
                         </div>
                         <div class="mb-3 text-center">
                             <a href="#" class="link"><small>Forgot Password</small></a>

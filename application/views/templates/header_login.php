@@ -1,3 +1,5 @@
+<!-- ini header biasa jika sudah login  -->
+
 <!doctype html>
 <html lang="en">
 
@@ -38,7 +40,7 @@
                 <i class="bi bi-list"></i>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-2">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0  gap-2">
                     <li class="nav-item">
                         <a class="nav-link" data-filename="index.php" href="<?= base_url('home') ?>">Home</a>
                     </li>
@@ -54,14 +56,65 @@
                     <li class="nav-item">
                         <a class="nav-link " data-filename="contact.php" href="<?= base_url('contact') ?>">Contact</a>
                     </li>
-                    <li class="nav-item login ms-0 ms-lg-3">
-                        <a class="nav-link" href="<?= base_url('autentifikasi/login') ?>">Login</a>
+                    <li class="login ms-0 ms-lg-3">
+                        <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                            <i class="fa fa-bars"></i>
+                        </button>
+
+                        <!-- Topbar Navbar -->
+                        <!-- Dropdown - User Information -->
+                        <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+                            <ul class="navbar-nav">
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <span class=" d-none d-lg-inline">username</span>
+                                        <img class="img-profile rounded-circle" src="<?= base_url('assets/img/profil/defaults.png') ?>" style="width: 30px;">
+                                    </a>
+
+                                    <ul class="dropdown-menu dropdown-menu-right shadow animated--grow-in mt-3">
+                                        <li>
+                                            <a class="dropdown-item text-gray small " href="#">Home
+                                                <i class="bi bi-house-door-fill text-gray"></i>
+                                            </a>
+                                        </li>
+                                        <div class="dropdown-divider"></div>
+                                        <li>
+                                            <a class="dropdown-item text-gray small " href="#">My profile
+                                                <i class="bi bi-person-fill text-gray"></i>
+                                            </a>
+                                        </li>
+                                        <div class="dropdown-divider"></div>
+                                        <li>
+                                            <a class="dropdown-item text-gray small " href="#">Logout
+                                                <i class="fas fa-sign-out-alt fa-sm fa-fw text-gray"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                        </div>
+
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
 
+
+    <?php
+    // connect ke database sementara
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $dbname = "db_carsresent";
+
+    // Create connection
+    $conn = new mysqli($servername, $username, $password, $dbname);
+
+    // Check connection
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
+
+    ?>
     <script>
         function prepareReviewForm(mobilModal, id_modal) {
             // Set the value of the hidden input in the modal form
