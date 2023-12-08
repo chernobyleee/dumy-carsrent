@@ -9,7 +9,7 @@
             </div>
             <div class="modal-body">
 
-                <form class="review" method="post" action="<?= base_url('review/inputreview'); ?>">
+                <form class="review" method="post" action="<?= base_url('cars/inputreview'); ?>">
 
                     <!-- nanti langsung ubah jadi username -->
                     <label class="form-label">Username: sementara isi pake id_user</label><br>

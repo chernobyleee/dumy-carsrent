@@ -54,25 +54,27 @@
                 <div class="contact-box w-100">
                     <div class="form">
                         <div class="row row-gap-3">
-                            <div class="col-6">
+                        <form class="form" method="post" action="<?= base_url('contact/inputcontact'); ?>">
+                            <div class="col-10">
                                 <label class="form-label">Your Name :</label>
-                                <input type="text" class="form-control">
+                                <input type="text" class="form-control" name="nama" id="nama">
                             </div>
-                            <div class="col-6">
+                            <div class="col-10">
                                 <label class="form-label">Your Email :</label>
-                                <input type="email" class="form-control">
+                                <input type="email" class="form-control" name="email" id="email">
                             </div>
-                            <div class="col-12">
+                            <div class="col-10">
                                 <label class="form-label">Subject :</label>
-                                <input type="text" class="form-control">
+                                <input type="text" class="form-control" name="subject" id="nama">
                             </div>
-                            <div class="col-12">
+                            <div class="col-10">
                                 <label class="form-label">Message :</label>
-                                <textarea rows="5" class="form-control"></textarea>
+                                <textarea rows="5" class="form-control" name="message" id="nama"></textarea>
                             </div>
-                            <div class="col-12 d-flex justify-content-center">
+                            <div class="col-10 d-flex justify-content-center">
                                 <button type="submit" class="form-control" id="form-submit">Send Message</button>
-                            </div>
+                            </div>    
+                        </form>                    
                         </div>
                     </div>
                 </div>

@@ -38,27 +38,7 @@
             </div>
             <div class="row align-items-center">
                 <div class="col-12">
-                <form class="registrasi" method="post" action="<?= base_url('autentifikasi/inputregister'); ?>">
-                        <div class="mb-3">
-                            <label class="form-label">Nama Lengkap</label>
-                            <input type="text" class="form-control" placeholder="Masukan Nama Lengkap" name="nama" required>
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-label">Username</label>
-                            <input type="text" class="form-control" placeholder="Masukan Username" name="username" required>
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-label">Email</label>
-                            <input type="email" class="form-control" placeholder="Masukan Email" name="email" required>
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-label">Password</label>
-                            <input type="password" class="form-control" placeholder="Masukan password" name="password" required>
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-label">Nomor Handphone</label>
-                            <input type="text" class="form-control" placeholder="Masukan Nomor Handphone" name="nohp" required>
-                    <form>
+                    <form class="register" method="post" action="<?= base_url('autentifikasi/register'); ?>">
                         <div class="mb-3">
                             <label class="form-label">Nama Lengkap</label>
                             <input type="text" class="form-control" placeholder="Masukan Nama Lengkap" required>
@@ -73,16 +53,11 @@
                         </div>
                         <div class="mb-3">
                             <label class="form-label">Password</label>
-                            <input type="email" class="form-control" placeholder="Masukan password" required>
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-label">Masukkan password lagi</label>
-                            <input type="email" class="form-control" placeholder="Masukan password" required>
+                            <input type="text" class="form-control" placeholder="Masukan password" required>
                         </div>
                         <div class="mb-3">
                             <label class="form-label">Nomor Handphone</label>
                             <input type="text" class="form-control" placeholder="Masukan Nomor Handphone" required>
-
                         </div>
                         
                         <div class="mb-3">

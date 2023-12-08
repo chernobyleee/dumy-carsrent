@@ -41,19 +41,6 @@
                     <img src="<?= base_url('assets/img/carsrent.png') ?>" class="img-fluid img-login" alt="">
                 </div>
                 <div class="col-12 col-md-6">
-                    <form class="user" method="post" action="<?= base_url('autentifikasi/login'); ?>">
-                        <div class="mb-3">
-                            <label class="form-label">Username</label>
-                            <?php if (validation_errors()): ?>
-    <div class="alert alert-danger" role="alert">
-        <?= validation_errors(); ?>
-    </div>
-<?php endif; ?>
-                            <input type="text" class="form-control" id="username" name="username" placeholder="Masukan Username">
-                        </div>
-                        <div class="mb-3">
-                            <label fclass="form-label">Password</label>
-                            <input type="password" class="form-control" id="password" name="password" placeholder="Masukan Password">
                     <form>
                         <div class="mb-3">
                             <label class="form-label">Username</label>
@@ -65,7 +52,7 @@
                         </div>
                         <div class="mb-3">
                             <button class="btn-login">Login</button>
-                            <a class="btn-cancel mt-1" href="<?= base_url('home')?> ">Back To Home</a>
+                            <a class="btn-cancel mt-1" href="index.php">Back To Home</a>
                         </div>
                         <div class="mb-3 text-center">
                             <a href="#" class="link"><small>Forgot Password</small></a>
@@ -80,7 +67,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
         crossorigin="anonymous"></script>
-    <script src= "<?= base_url('assets/js/auth.js') ?>"></script>
     <script src="js/auth.js"></script>
     <script>AOS.init();</script>
 </body>

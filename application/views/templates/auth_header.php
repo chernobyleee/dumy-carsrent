@@ -1,6 +1,3 @@
-<!-- ini untuk templates di halaman profil -->
-
-
 <!doctype html>
 <html lang="en">
 

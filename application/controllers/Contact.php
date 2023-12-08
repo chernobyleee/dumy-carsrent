@@ -1,8 +1,6 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
-
 class Contact extends CI_Controller {
-
+    /// contact bisa diakses oleh guest dan user
     public function index(){
         $this->load->view('templates/header');
         $this->load->view('contact/index');
@@ -25,7 +23,9 @@ class Contact extends CI_Controller {
         );
 
         $this->db->insert('contact', $data);
-        redirect('review');
+        $this->session->set_flashdata('success', 'Message sent.');
+        redirect('contact');
+        
     }
 
 

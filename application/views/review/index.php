@@ -1,20 +1,3 @@
-<?php
-// connect ke database sementara
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "db_carsresent";
-
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-?>
-
-
 <section id="breadcrumb">
     <div class="container">
         <div class="row">
@@ -36,30 +19,19 @@ if ($conn->connect_error) {
                 <section id="cars">
                     <div class="filter-wrap mt-4 d-flex flex-lg-row flex-column justify-content-lg-center row-gap-2 column-gap-3 mb-4"
                         data-aos="zoom-in" data-aos-duration="1000">
-                        <span class="filter-btn filter-active" data-filter="*">All</span>
-                        
+                        <span class="filter-btn filter-active" data-filter="*">All</span>                        
                         <?php
-
-                        $sql = "SELECT nama as 'tipe' FROM tipe";
-
-                        $tipe = $conn->query($sql);
-                        foreach ($tipe as $t) { ?>
-                            <span class="filter-btn" data-filter="filter-<?= $t['tipe']; ?>">
-                                <?= $t['tipe']; ?>
-                            </span>
-                        <?php } ?>
-                    </div>
+                        
+foreach ($tipe as $t) { ?>
+    <span class="filter-btn" data-filter="filter-<?= $t->tipe; ?>"><?= $t->tipe; ?></span>
+<?php } ?>
+</div>
                     <div class="row cars-container" data-aos="zoom-in" data-aos-duration="1000">
                         <?php
-                        $sql = "SELECT tipe.nama as 'tipe', user.username as 'username', mobil.nama as 'nama', mobil.gambar as 'gambar', massage , rating
-                    FROM review
-                    INNER join user on user.id_user = review.id_user
-                    INNER Join mobil on mobil.id = review.id
-                    INNER Join tipe on tipe.id_tipe = mobil.id_tipe";
-
-                        $review = $conn->query($sql);
-                        $a = 1;
-                        foreach ($review as $r) { ?>
+                        
+                        foreach ($review as $r) 
+                        { 
+                            ?>
                         
                             <div class="col-xl-4 col-lg-4 col-md-4 col-4 mt-4 cars-item filter-<?= $r['tipe']; ?> min-height: 540px">
                                 <div class="card mb-3" style="max-width: 540px;">

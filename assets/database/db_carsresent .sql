@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 06, 2023 at 02:32 PM
--- Server version: 10.4.28-MariaDB
--- PHP Version: 8.0.28
+-- Waktu pembuatan: 08 Des 2023 pada 11.35
+-- Versi server: 10.4.28-MariaDB
+-- Versi PHP: 8.0.28
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,7 +24,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `contact`
+-- Struktur dari tabel `contact`
 --
 
 CREATE TABLE `contact` (
@@ -36,16 +36,21 @@ CREATE TABLE `contact` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `contact`
+-- Dumping data untuk tabel `contact`
 --
 
 INSERT INTO `contact` (`id_contact`, `nama`, `email`, `subject`, `message`) VALUES
-(1, 'Orang Gila', '12221061@bsi.ac.id', 'Kurang Mobil Kurang Mobil Kurang Mobil Kurang Mobil Kurang Mobil ', 'Mobilnya kurang lengkap gan Mobilnya kurang lengkap gan Mobilnya kurang lengkap gan Mobilnya kurang lengkap gan Mobilnya kurang lengkap gan Mobilnya kurang lengkap gan Mobilnya kurang lengkap gan Mobilnya kurang lengkap gan Mobilnya kurang lengkap gan Mobi');
+(1, 'Orang Gila', '12221061@bsi.ac.id', 'Kurang Mobil Kurang Mobil Kurang Mobil Kurang Mobil Kurang Mobil ', 'Mobilnya kurang lengkap gan Mobilnya kurang lengkap gan Mobilnya kurang lengkap gan Mobilnya kurang lengkap gan Mobilnya kurang lengkap gan Mobilnya kurang lengkap gan Mobilnya kurang lengkap gan Mobilnya kurang lengkap gan Mobilnya kurang lengkap gan Mobi'),
+(2, 'Alief Karunia Dzamar', '12221061@bsi.ac.id', 'Ingfo', 'Ling'),
+(3, 'Alief Karunia Dzamar', '12221061@bsi.ac.id', 'Ingfo', 'asdasd'),
+(4, 'a', 'a@g.c', 'c', 'd'),
+(5, '2', 'a@g.c', 'Kurang Mobil Kurang Mobil Kurang Mobil Kurang Mobil Kurang Mobil ', 'asdasdasd'),
+(6, '2', 'a@g.c', 'Kurang Mobil Kurang Mobil Kurang Mobil Kurang Mobil Kurang Mobil ', 'asdasdasd');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `mobil`
+-- Struktur dari tabel `mobil`
 --
 
 CREATE TABLE `mobil` (
@@ -61,7 +66,7 @@ CREATE TABLE `mobil` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `mobil`
+-- Dumping data untuk tabel `mobil`
 --
 
 INSERT INTO `mobil` (`id`, `id_tipe`, `nama`, `transmisi`, `tahun`, `warna`, `kursi`, `harga`, `gambar`) VALUES
@@ -77,7 +82,7 @@ INSERT INTO `mobil` (`id`, `id_tipe`, `nama`, `transmisi`, `tahun`, `warna`, `ku
 -- --------------------------------------------------------
 
 --
--- Table structure for table `review`
+-- Struktur dari tabel `review`
 --
 
 CREATE TABLE `review` (
@@ -90,7 +95,7 @@ CREATE TABLE `review` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `review`
+-- Dumping data untuk tabel `review`
 --
 
 INSERT INTO `review` (`id_review`, `id_user`, `id`, `is_active`, `rating`, `massage`) VALUES
@@ -99,12 +104,14 @@ INSERT INTO `review` (`id_review`, `id_user`, `id`, `is_active`, `rating`, `mass
 (375, 1, 2, 0, 4, 'aaa'),
 (376, 1, 2, 0, 3, 'ci3'),
 (377, 2, 2, 0, 4, 'jelek'),
-(378, 1, 3, 0, 5, 'bagus banget bagus banget bagus banget bagus banget bagus banget');
+(378, 1, 3, 0, 5, 'bagus banget bagus banget bagus banget bagus banget bagus banget'),
+(379, 1, 2, 0, 4, 'aasdasd'),
+(380, 1, 2, 0, 4, '123');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tipe`
+-- Struktur dari tabel `tipe`
 --
 
 CREATE TABLE `tipe` (
@@ -113,7 +120,7 @@ CREATE TABLE `tipe` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `tipe`
+-- Dumping data untuk tabel `tipe`
 --
 
 INSERT INTO `tipe` (`id_tipe`, `nama`) VALUES
@@ -126,7 +133,7 @@ INSERT INTO `tipe` (`id_tipe`, `nama`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `user`
+-- Struktur dari tabel `user`
 --
 
 CREATE TABLE `user` (
@@ -141,32 +148,33 @@ CREATE TABLE `user` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `user`
+-- Dumping data untuk tabel `user`
 --
 
 INSERT INTO `user` (`id_user`, `role`, `username`, `password`, `nama`, `email`, `nohp`, `gambar`) VALUES
-(1, 0, 'ujang sangkuriang', 'rahasianegara', '', '', 217918768, 'as'),
-(2, 0, 'budi', 'rahasianegro', '', '', 12345, 'asd');
+(1, 1, 'ujang sangkuriang', 'rahasianegara', '', '', 217918768, 'as'),
+(2, 1, 'budi', 'rahasianegro', '', '', 12345, 'asd'),
+(7, 0, 'orang', 'oranggila', 'Orang Gila', '', 1, '');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `contact`
+-- Indeks untuk tabel `contact`
 --
 ALTER TABLE `contact`
   ADD PRIMARY KEY (`id_contact`);
 
 --
--- Indexes for table `mobil`
+-- Indeks untuk tabel `mobil`
 --
 ALTER TABLE `mobil`
   ADD PRIMARY KEY (`id`),
   ADD KEY `id_tipe` (`id_tipe`);
 
 --
--- Indexes for table `review`
+-- Indeks untuk tabel `review`
 --
 ALTER TABLE `review`
   ADD PRIMARY KEY (`id_review`),
@@ -174,63 +182,63 @@ ALTER TABLE `review`
   ADD KEY `id_user` (`id_user`);
 
 --
--- Indexes for table `tipe`
+-- Indeks untuk tabel `tipe`
 --
 ALTER TABLE `tipe`
   ADD PRIMARY KEY (`id_tipe`);
 
 --
--- Indexes for table `user`
+-- Indeks untuk tabel `user`
 --
 ALTER TABLE `user`
   ADD PRIMARY KEY (`id_user`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT untuk tabel yang dibuang
 --
 
 --
--- AUTO_INCREMENT for table `contact`
+-- AUTO_INCREMENT untuk tabel `contact`
 --
 ALTER TABLE `contact`
-  MODIFY `id_contact` int(16) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_contact` int(16) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
--- AUTO_INCREMENT for table `mobil`
+-- AUTO_INCREMENT untuk tabel `mobil`
 --
 ALTER TABLE `mobil`
   MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
--- AUTO_INCREMENT for table `review`
+-- AUTO_INCREMENT untuk tabel `review`
 --
 ALTER TABLE `review`
-  MODIFY `id_review` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=379;
+  MODIFY `id_review` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=381;
 
 --
--- AUTO_INCREMENT for table `tipe`
+-- AUTO_INCREMENT untuk tabel `tipe`
 --
 ALTER TABLE `tipe`
   MODIFY `id_tipe` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT for table `user`
+-- AUTO_INCREMENT untuk tabel `user`
 --
 ALTER TABLE `user`
-  MODIFY `id_user` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_user` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
--- Constraints for dumped tables
+-- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
 --
 
 --
--- Constraints for table `mobil`
+-- Ketidakleluasaan untuk tabel `mobil`
 --
 ALTER TABLE `mobil`
   ADD CONSTRAINT `mobil_ibfk_1` FOREIGN KEY (`id_tipe`) REFERENCES `tipe` (`id_tipe`);
 
 --
--- Constraints for table `review`
+-- Ketidakleluasaan untuk tabel `review`
 --
 ALTER TABLE `review`
   ADD CONSTRAINT `review_ibfk_1` FOREIGN KEY (`id_user`) REFERENCES `user` (`id_user`),
