@@ -76,6 +76,7 @@ class="alert alert-danger alert-message" role="alert">Akun tidak
 terdaftar!!</div>');
             redirect('autentifikasi');
         }
+
     }
     //// controller dibawah untuk view dan input. yg diatas rencananya buat cek login
     
@@ -106,4 +107,5 @@ terdaftar!!</div>');
         $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-message" role="alert">Anda telah logout!</div>');
         redirect('autentifikasi');
     }
+
 }

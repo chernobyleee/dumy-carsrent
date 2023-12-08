@@ -58,6 +58,31 @@
                         <div class="mb-3">
                             <label class="form-label">Nomor Handphone</label>
                             <input type="text" class="form-control" placeholder="Masukan Nomor Handphone" name="nohp" required>
+                    <form>
+                        <div class="mb-3">
+                            <label class="form-label">Nama Lengkap</label>
+                            <input type="text" class="form-control" placeholder="Masukan Nama Lengkap" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Username</label>
+                            <input type="text" class="form-control" placeholder="Masukan Username" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Email</label>
+                            <input type="email" class="form-control" placeholder="Masukan Email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Password</label>
+                            <input type="email" class="form-control" placeholder="Masukan password" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Masukkan password lagi</label>
+                            <input type="email" class="form-control" placeholder="Masukan password" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Nomor Handphone</label>
+                            <input type="text" class="form-control" placeholder="Masukan Nomor Handphone" required>
+
                         </div>
                         
                         <div class="mb-3">
