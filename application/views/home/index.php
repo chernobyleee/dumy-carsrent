@@ -60,11 +60,12 @@
 
 
             <!-- ini isinya review dari user -->
+            <!-- foreach(array_slice($section['Article'], 0, 3) as $article ):-->
             <?php
-            for ($i = 0; $i < 3; $i++) {
+            foreach(array_slice($review, 0, 3) as $r ){
             ?>
-                <div class="col-md-6 col-lg-4 col-12 mb-4 d-flex align-items-stretch" data-aos="zoom-in" data-aos-duration="1000">
-                    <div class="card testimonial-card">
+                <div class="col-md-6 col-lg-4 col-12 mb-4 d-flex align-items-stretch" data-aos="zoom-in" data-aos-duration="1000" >
+                    <div class="card testimonial-card"style="width: 1000px;">
                         <div class="card-up"></div>
                         <div class="avatar mx-auto bg-white">
                             <img src="<?= base_url('assets/img/profil/defaults.png') ?>" class="rounded-circle img-fluid" />
@@ -72,17 +73,17 @@
                         <div class="card-body">
 
                             <!-- nama user -->
-                            <h4 class="mb-4">Nama user</h4>
+                            <h4 class="mb-4"><?= $r['username']; ?></h4>
                             <hr />
-
+                            <div class="position-relative "style="left:100px">
+                                <img src="<?= base_url('assets/img/star/star'). $r['rating']; ?>.png" class="img-fluid rounded-start position-absolute top-0 start-0" style="width: 100px;">
+                            </div>                        
+                            <br>
                             <p class="dark-grey-text mt-4">
 
                                 <!-- review user -->
-                                <i class="fas fa-quote-left pe-2"></i>
-                                ISI REVIEW USER
-                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit,
-                                facilis ullam architecto corporis vitae quod deleniti id aut debitis
-                                porro!
+                                <i class="fas  pe-2"></i>
+                                "<?= $r['massage']; ?>"
                             </p>
                         </div>
                     </div>
