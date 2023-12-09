@@ -54,14 +54,6 @@
                         <div class="mb-3">
                             <label fclass="form-label">Password</label>
                             <input type="password" class="form-control" id="password" name="password" placeholder="Masukan Password">
-                    <form>
-                        <div class="mb-3">
-                            <label class="form-label">Username</label>
-                            <input type="text" class="form-control">
-                        </div>
-                        <div class="mb-3">
-                            <label fclass="form-label">Password</label>
-                            <input type="password" class="form-control">
                         </div>
                         <div class="mb-3">
                             <button class="btn-login">Login</button>
