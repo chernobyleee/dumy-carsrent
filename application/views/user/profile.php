@@ -19,7 +19,7 @@ if ($conn->connect_error) {
     <div class="container-fluid">
         <div class="row">
 
-            <div class="col-lg-6 justify-content-x">
+            <div class="col-lg-6 justify-content-x mt-5">
                 <div class="card card border-left-primary shadow h-100 py-2 " style="max-width: 600px;">
                     <div class="row no-gutters">
                         <div class="col-md-4">
@@ -40,7 +40,7 @@ if ($conn->connect_error) {
                 </div>
             </div>
 
-            <div class="col-lg-6 justify-content-x">
+            <div class="col-lg-6 justify-content-x mt-5">
                 <div class="card border-left-primary shadow h-100 py-2">
                     <div class="card-body">
                         <div class="row no-gutters align-items-center">
