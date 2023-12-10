@@ -1,4 +1,30 @@
 <!-- halaman profil -->
+<style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        #wrapper {
+            display: flex;
+            flex-direction: column;
+            min-height: 70vh;
+        }
+
+        #content {
+            flex: 1;
+        }
+
+        #footer {
+            flex-shrink: 0;
+        }
+    </style>
+
+<div id="wrapper">
+    <div id="content" class="mt-5">
+
+ 
 
 <div class="container mt-5">
     <div class="container-fluid">
@@ -50,12 +76,12 @@
     <div class="container">
         <h3 class="mt-5">Review dan ulasan anda</h3>
         <tbody>
-            <section id="cars">
-                <div class="row cars-container" data-aos="zoom-in" data-aos-duration="1000">
+            <section id="cars ">
+                <div class="row cars-container mt-5" data-aos="zoom-in" data-aos-duration="1000">
                     <?php
                     foreach ($review as $r) { ?>
 
-                        <div class="col-xl-4 col-lg-4 col-md-4 col-4 mt-4 cars-item filter-<?= $r['tipe']; ?> min-height: 540px">
+                        <div class="col-xl-4 col-lg-4 col-md-4 col-4 mt-4 cars-item filter-<?= $r['tipe']; ?> min-height: 540px ">
                             <div class="card mb-3" style="max-width: 540px;">
                                 <div class="row">
                                     <div class=" col-12 mt-3">
@@ -189,3 +215,6 @@
             </div>
         </div>
     </div>
+
+    </div>
+</div>

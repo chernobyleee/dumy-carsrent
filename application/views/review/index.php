@@ -1,3 +1,26 @@
+<style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        #wrapper {
+            display: flex;
+            flex-direction: column;
+            min-height: 70vh;
+        }
+
+        #content {
+            flex: 1;
+        }
+
+        #footer {
+            flex-shrink: 0;
+        }
+    </style>
+
+
 <section id="breadcrumb">
     <div class="container">
         <div class="row">
@@ -7,6 +30,11 @@
         </div>
     </div>
 </section>
+
+<div id="wrapper">
+    <div id="content">
+
+
 
 <!-- start content -->
 <div class="container">
@@ -73,4 +101,6 @@ foreach ($tipe as $t) { ?>
 </div>
 </div>
 </div>
-</section>
+
+</div>
+</div>

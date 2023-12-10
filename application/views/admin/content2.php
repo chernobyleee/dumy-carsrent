@@ -21,11 +21,11 @@
                 </thead>
 
                 <tbody>
-                <?php //$i = 1; $i < 10; $i++
-                    $i = 0;
+                <?php
+                    $i = 1 ;
                     foreach ($message as $c) {
                         ?>
-                        <tr id="row<?= $i++ ?>" class="text-center">
+                        <tr id="row<?= $i ?>" class="text-center">
                             <td scope="row" class="w-5"><?= $i ?></td>
                             <td scope="row"><?= $c->nama ?></td>
                             <td scope="row"><?= $c->email ?></td>
@@ -37,7 +37,7 @@
                                     <p class="text-panjang" id="myText">
                                         <?= $c->message ?>
                                     </p>
-                                    <a href="#" id="linkMassage<?= $i ?>" onclick="return confirm('tulis semua tulisan massage')" disabled>Lihat Selengkapnya</a>
+                                    <a href="#" id="linkMassage<?= $i ?>" onclick="return confirm('<?= $c->message ?>')" disabled>Lihat Selengkapnya</a>
                                     <!-- Link Lihat Selengkapnya -->
                                 </div>
 
@@ -56,7 +56,9 @@
                                 </div>
                             </td>
                         </tr>
-                    <?php } ?>
+                    <?php 
+                    $i++;
+                } ?>
                 </tbody>
 
             </table>

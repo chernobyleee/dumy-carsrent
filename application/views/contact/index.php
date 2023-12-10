@@ -1,3 +1,9 @@
+<style>
+        #wordCountMessage {
+            color: red;
+        }
+</style>
+
 <section id="breadcrumb">
     <div class="container">
         <div class="row">
@@ -61,15 +67,16 @@
                             </div>
                             <div class="col-10">
                                 <label class="form-label">Your Email :</label>
-                                <input type="email" class="form-control" name="email" id="email">
+                                <input type="email" class="form-control" name="email" id="email" required>
                             </div>
                             <div class="col-10">
-                                <label class="form-label">Subject :</label>
-                                <input type="text" class="form-control" name="subject" id="nama">
+                                <label class="form-label" for="textInput">Subject :</label>
+                                <input type="text" class="form-control" name="subject" id="textInput" oninput="countWords()">
+                                <p id="wordCountMessage"></p>
                             </div>
                             <div class="col-10">
                                 <label class="form-label">Message :</label>
-                                <textarea rows="5" class="form-control" name="message" id="nama"></textarea>
+                                <textarea rows="5" class="form-control" name="message" id="message"></textarea>
                             </div>
                             <div class="col-10 d-flex justify-content-center">
                                 <button type="submit" class="form-control" id="form-submit">Send Message</button>
@@ -82,3 +89,23 @@
         </div>
     </div>
 </section>
+
+
+<!-- <script>
+    function countWords() {
+            // Mendapatkan nilai teks dari textarea
+            let text = document.getElementById('subject').value;
+
+            // Menghitung jumlah kata
+            let wordCount = text.split(/\s+/).filter(word => word.length > 0).length;
+
+            // Mendapatkan elemen pesan dan menetapkan pesan sesuai dengan jumlah kata yang diizinkan
+            let wordCountMessage = document.getElementById('wordCountMessage');
+            let maxWords = 2; // Ganti dengan jumlah kata yang diinginkan
+            if (wordCount > maxWords) {
+                wordCountMessage.textContent = `Melebihi batas kata maksimum (${maxWords} kata).`;
+            } else {
+                wordCountMessage.textContent = `Jumlah kata: ${wordCount}`;
+            }
+        }
+</script> -->
