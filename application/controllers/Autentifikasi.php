@@ -44,7 +44,7 @@ class Autentifikasi extends CI_Controller
         }
         $this->load->view('autentifikasi/registrasi');
     }
-    // ini sementara langsung ke form login
+    // ini sementara langsung ke form login password_hash('password', PASSWORD_DEFAULT)
     private function _login()
     {
         $username = $this->input->post('username', true);
@@ -54,10 +54,12 @@ class Autentifikasi extends CI_Controller
         if ($user) {
             //jika user sudah aktif
             //cek password
-            if ($password == $user['password']) {
+            if (password_verify($password, $user['password'])) {
                 $data = [
                     'username' => $user['username'],
-                    'role' => $user['role']
+                    'role' => $user['role'],
+                    'nama' =>$user['nama'],
+                    'gambar' => $user['gambar'],
                 ];
                 $this->session->set_userdata($data);
                 if ($user['role'] == 1) {
@@ -92,7 +94,7 @@ terdaftar!!</div>');
         $nama = $this->input->post('nama') ? $this->input->post('nama') : null;
         $username = $this->input->post('username') ? $this->input->post('username') : null;
         $email = $this->input->post('email') ? $this->input->post('email') : null;
-        $password = $this->input->post('password') ? $this->input->post('password') : null;
+        $password = password_hash($this->input->post('password') , PASSWORD_DEFAULT) ? password_hash($this->input->post('password'), PASSWORD_DEFAULT) : null;
         $nohp = $this->input->post('nohp') ? $this->input->post('nohp') : null;
 
         $data = array(
